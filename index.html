@@ -1171,6 +1171,18 @@
       }
     }
 
+    @media(max-width:720px) {
+      .hero {
+        min-height: auto;
+        padding: 76px 0 36px
+      }
+
+      .stage {
+        min-height: clamp(360px, 62vh, 500px);
+        margin-top: 6px
+      }
+    }
+
     @media(prefers-reduced-motion:reduce) {
       * {
         animation: none !important;
@@ -1857,6 +1869,14 @@
     stage.addEventListener('pointerenter', () => clearInterval(timer));
     stage.addEventListener('pointerleave', () => timer = setInterval(next, 4200));
     layout();
+
+    /* keep the 3D carousel aligned after fonts/images/mobile address-bar settle */
+    function relayout() { layout(); if (window.ScrollTrigger) ScrollTrigger.refresh(); }
+    ['load', 'orientationchange', 'pageshow'].forEach(ev => addEventListener(ev, relayout));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+    requestAnimationFrame(relayout);
+    setTimeout(relayout, 250);
+    let _lt; addEventListener('scroll', () => { cancelAnimationFrame(_lt); _lt = requestAnimationFrame(layout); }, { passive: true });
 
     /* ===== particles in LE THRON ===== */
     (function () {
