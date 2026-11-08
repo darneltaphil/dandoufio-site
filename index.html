@@ -5,6 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dandoufio · Temple Thron Vodou · Togo</title>
+  <meta name="description"
+    content="Dandoufio, temple Thron Vodou à Lomé (Togo). Protection, justice et guérison dans le respect des anciens — cérémonies, enseignements et consultations.">
+  <link rel="canonical" href="https://dandoufio.org/">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Temple Dandoufio">
+  <meta name="theme-color" content="#0b3bea">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dandoufio">
+  <meta property="og:title" content="Dandoufio — Temple Thron Vodou · Togo">
+  <meta property="og:description"
+    content="La maison du Thron à Lomé (Togo) — protection, justice et guérison dans le respect des anciens.">
+  <meta property="og:url" content="https://dandoufio.org/">
+  <meta property="og:image" content="https://dandoufio.org/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dandoufio — Temple Thron Vodou · Togo">
+  <meta name="twitter:description" content="La maison du Thron à Lomé (Togo) — protection, justice et guérison.">
+  <meta name="twitter:image" content="https://dandoufio.org/assets/og-image.jpg">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlaceOfWorship",
+    "name": "Dandoufio",
+    "alternateName": "Temple Dandoufio",
+    "description": "Temple Thron Vodou à Lomé, Togo — protection, justice et guérison dans le respect des anciens.",
+    "url": "https://dandoufio.org/",
+    "image": "https://dandoufio.org/assets/og-image.jpg",
+    "telephone": "+22899164666",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kpémé Yakabo",
+      "addressLocality": "Lomé",
+      "addressCountry": "TG"
+    },
+    "sameAs": ["https://www.youtube.com/@DANDOUFIO"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -1670,36 +1719,39 @@
       </div>
       <div class="videos">
         <a class="vcard anim-pillar" href="https://youtu.be/SCqE5cyLNo4" target="_blank" rel="noopener">
-          <div class="vthumb"><img src="https://img.youtube.com/vi/SCqE5cyLNo4/hqdefault.jpg" alt="" loading="lazy">
+          <div class="vthumb"><img src="https://img.youtube.com/vi/SCqE5cyLNo4/hqdefault.jpg"
+              alt="Cérémonie au temple Dandoufio" loading="lazy">
             <div class="scrim"></div>
             <div class="play"><i><svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
                 </svg></i></div>
           </div>
           <div class="vmeta"><span class="tag">Cérémonie</span>
-            <h3>[Titre de la vidéo]</h3>
+            <h3>Azon</h3>
           </div>
         </a>
         <a class="vcard anim-pillar" href="https://youtu.be/V-aBnde49-Q" target="_blank" rel="noopener">
-          <div class="vthumb"><img src="https://img.youtube.com/vi/V-aBnde49-Q/hqdefault.jpg" alt="" loading="lazy">
+          <div class="vthumb"><img src="https://img.youtube.com/vi/V-aBnde49-Q/hqdefault.jpg"
+              alt="Enseignement du Thron au temple Dandoufio" loading="lazy">
             <div class="scrim"></div>
             <div class="play"><i><svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
                 </svg></i></div>
           </div>
-          <div class="vmeta"><span class="tag">Enseignement</span>
-            <h3>[Titre de la vidéo]</h3>
+          <div class="vmeta"><span class="tag">Adoration</span>
+            <h3>KOUNDE</h3>
           </div>
         </a>
         <a class="vcard anim-pillar" href="https://youtu.be/cb8XveD5zlc" target="_blank" rel="noopener">
-          <div class="vthumb"><img src="https://img.youtube.com/vi/cb8XveD5zlc/hqdefault.jpg" alt="" loading="lazy">
+          <div class="vthumb"><img src="https://img.youtube.com/vi/cb8XveD5zlc/hqdefault.jpg"
+              alt="Chant rituel au temple Dandoufio" loading="lazy">
             <div class="scrim"></div>
             <div class="play"><i><svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
                 </svg></i></div>
           </div>
           <div class="vmeta"><span class="tag">Chant rituel</span>
-            <h3>[Titre de la vidéo]</h3>
+            <h3>Attiké</h3>
           </div>
         </a>
       </div>
@@ -1841,7 +1893,7 @@
     ];
     const track = document.getElementById('track'), plateK = document.getElementById('plate-k'), plateT = document.getElementById('plate-t'), dotsEl = document.getElementById('dots');
     let cur = 0, cards = [];
-    slides.forEach((s, i) => { const c = document.createElement('div'); c.className = 'card'; c.innerHTML = `<img src="${s.img}" alt=""><div class="veil"></div>`; c.addEventListener('click', () => go(i)); track.appendChild(c); cards.push(c); const d = document.createElement('button'); d.addEventListener('click', () => go(i)); dotsEl.appendChild(d); });
+    slides.forEach((s, i) => { const c = document.createElement('div'); c.className = 'card'; c.innerHTML = `<img src="${s.img}" alt="${s.k} — temple Dandoufio"><div class="veil"></div>`; c.addEventListener('click', () => go(i)); track.appendChild(c); cards.push(c); const d = document.createElement('button'); d.addEventListener('click', () => go(i)); dotsEl.appendChild(d); });
     const dots = [...dotsEl.children], N = slides.length;
     function clamp(a, b, c) { return Math.max(a, Math.min(b, c)); }
     function layout() {
@@ -1936,7 +1988,7 @@
       if (allImgs.length) {
         shuffle(allImgs).slice(0, 9).forEach(it => {
           const d = document.createElement('div'); d.className = 'm-item';
-          d.innerHTML = '<img src="' + it.src + '" loading="lazy" alt="">';
+          d.innerHTML = '<img src="' + it.src + '" loading="lazy" alt="Temple Dandoufio">';
           d.addEventListener('click', () => { openModal(); showAlbum(it.ai); });
           masonry.appendChild(d);
         });
@@ -1953,7 +2005,7 @@
         if (!G.albums.length) { grid.innerHTML = '<p style="color:var(--ink-soft)">Aucun album pour le moment.</p>'; return; }
         G.albums.forEach((a, idx) => {
           const el = document.createElement('div'); el.className = 'album-cover';
-          el.innerHTML = '<div class="ac-img"><img src="' + (a.images[0] || '') + '" loading="lazy" alt=""></div>'
+          el.innerHTML = '<div class="ac-img"><img src="' + (a.images[0] || '') + '" loading="lazy" alt="' + a.name + '"></div>'
             + '<div class="ac-meta"><b>' + a.name + '</b><span>' + a.images.length + ' photo' + (a.images.length > 1 ? 's' : '') + '</span></div>';
           el.addEventListener('click', () => showAlbum(idx));
           grid.appendChild(el);
@@ -1966,7 +2018,7 @@
         const grid = gmBody.querySelector('.photo-grid');
         a.images.forEach((src, i) => {
           const el = document.createElement('div'); el.className = 'p-item';
-          el.innerHTML = '<img src="' + src + '" loading="lazy" alt="">';
+          el.innerHTML = '<img src="' + src + '" loading="lazy" alt="' + a.name + '">';
           el.addEventListener('click', () => openLightbox(a.images, i));
           grid.appendChild(el);
         });
@@ -1979,7 +2031,7 @@
       let lbList = [], lbIdx = 0;
       function openLightbox(list, i) { lbList = list; lbIdx = i; updateLb(); lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden', 'false'); }
       function closeLb() { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); }
-      function updateLb() { lbImg.src = lbList[lbIdx]; lbCounter.textContent = (lbIdx + 1) + ' / ' + lbList.length; }
+      function updateLb() { lbImg.src = lbList[lbIdx]; lbImg.alt = 'Temple Dandoufio'; lbCounter.textContent = (lbIdx + 1) + ' / ' + lbList.length; }
       function lbNext() { lbIdx = (lbIdx + 1) % lbList.length; updateLb(); }
       function lbPrev() { lbIdx = (lbIdx - 1 + lbList.length) % lbList.length; updateLb(); }
       lbNextBtn.addEventListener('click', lbNext); lbPrevBtn.addEventListener('click', lbPrev); lbClose.addEventListener('click', closeLb);

@@ -1,0 +1,43 @@
+SEO pack — Dandoufio
+====================
+
+Files in this pack (place at your repo root, mirroring these paths):
+  index.html                     -> replaces your current index.html (SEO <head> + alt text added)
+  assets/og-image.jpg            -> social share banner (1200x630)
+  assets/favicon.svg             -> browser tab icon
+  assets/apple-touch-icon.png    -> iOS home-screen icon (180x180)
+  robots.txt                     -> site root
+  sitemap.xml                    -> site root
+
+IMPORTANT — deploy step
+-----------------------
+Your GitHub Actions workflow copies only index.html, gallery.js, images/ and assets/
+into dist/. robots.txt and sitemap.xml sit at the ROOT, so add ONE line to the
+"Assemble site (dist/)" step so they ship too:
+
+      - name: Assemble site (dist/)
+        run: |
+          mkdir -p dist
+          cp index.html gallery.js dist/
+          cp -r images dist/
+          if [ -d assets ]; then cp -r assets dist/; fi
+          cp robots.txt sitemap.xml dist/ 2>/dev/null || true     <-- add this line
+
+(assets/ already ships, so the share image + favicons need no workflow change.)
+
+After deploy, verify:
+  https://dandoufio.org/robots.txt
+  https://dandoufio.org/sitemap.xml
+  https://dandoufio.org/assets/og-image.jpg
+
+Then test the social preview:
+  - Facebook/WhatsApp: https://developers.facebook.com/tools/debug/  (paste dandoufio.org, click "Scrape Again")
+  - Twitter/X:         https://cards-dev.twitter.com/validator
+  - Google rich result:https://search.google.com/test/rich-results
+
+Finally, submit the site to Google Search Console (search.google.com/search-console)
+and add the sitemap there — that's what actually gets you indexed fast.
+
+Still placeholder (hurts SEO a little until filled):
+  - The 3 video titles still say "[Titre de la vidéo]"
+  - Hero plate "[Nom du Hounon]" and consultation hours
