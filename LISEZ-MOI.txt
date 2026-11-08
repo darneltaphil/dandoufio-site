@@ -6,16 +6,6 @@ Fichiers
   gallery.js         Index des albums, GENERE automatiquement — ne pas editer a la main.
   build-gallery.py   Script qui lit le dossier images/ et (re)genere gallery.js.
   images/            Vos albums de photos.
-  assets/            Photos fixes de la page (carrousel, temple, Thron, contact).
-
-Le carrousel et les photos fixes
---------------------------------
-Les 7 photos du carrousel sont dans  assets/carousel/  (01.jpg ... 07.jpg).
-Pour changer une photo : remplacez le fichier en gardant le meme nom.
-Pour ajouter/retirer une photo ou changer sa legende : modifiez la liste
-« slides » dans index.html (chercher  HERO carousel ) :
-    {img:"assets/carousel/01.jpg",k:"Le gardien",t:"[Nom du Hounon]"},
-Les autres photos fixes : assets/temple.jpg, assets/thron.jpg, assets/contact.jpg.
 
 La galerie
 ----------
@@ -37,7 +27,7 @@ La galerie
 
 Mise en ligne
 -------------
-Mettez TOUT le dossier en ligne (index.html + gallery.js + images/ + assets/).
+Mettez TOUT le dossier en ligne (index.html + gallery.js + images/).
 Les miniatures des 3 videos se chargent depuis YouTube (connexion requise).
 
 Textes a completer : cherchez les crochets [ ... ] dans index.html
